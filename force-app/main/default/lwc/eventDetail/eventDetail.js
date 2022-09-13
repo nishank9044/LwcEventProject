@@ -102,7 +102,7 @@ handleDelete(){
     });
    
 }
-
+// Git changes for this file
 handleAddSpeaker(event){
  const defaultValues = encodeDefaultFieldValues({
     Event__c:this.recordId
