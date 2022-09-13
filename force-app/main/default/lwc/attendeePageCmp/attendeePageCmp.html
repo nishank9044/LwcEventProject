@@ -1,0 +1,22 @@
+<template>
+    <lightning-card  variant="Narrow"  title="My upcoing Events" icon-name="standard:account">
+       <div class="slds-m-around_small">
+         <lightning-accordion allow-multiple-sections-open active-section-name="A">
+            <lightning-accordion-section name="A" label="Accordion Title A">
+               <lightning-datatable
+                key-field="id"
+                data={dataList}
+                show-row-number-column
+                hide-checkbox-column
+                columns={columnsList}
+                >
+               </lightning-datatable>
+            </lightning-accordion-section>
+            <lightning-accordion-section name="B" label="Accordion Title B">
+                <p>This is the content area for section B.</p>
+            </lightning-accordion-section>
+           
+         </lightning-accordion>
+       </div>
+    </lightning-card>
+</template>

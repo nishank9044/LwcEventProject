@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Account and Contact template Looping">
+         <div class="slds-m-around_medium">
+            <template for:each={conList} for:item="contact">
+                <div key = {contact.Id}>
+             <strong>Account Name :</strong>  {contact.Account.Name} <strong>Contact Name :</strong> {contact.LastName}
+                </div>
+            </template>
+         </div>
+    </lightning-card>
+</template>

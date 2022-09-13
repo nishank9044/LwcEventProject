@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Two Way Data Binding and @track">
+        <div class="slds-m-around_small">
+           <lightning-input type="text" label=" Enter the Name " onkeyup={handleInput}></lightning-input>
+           <strong> My Name is :</strong> {name}<br/>
+           <lightning-input type="text" label="Update Name value" onkeyup={handleChange}></lightning-input>
+           <div>{nameList}</div>
+           {updateName}
+        </div>
+    </lightning-card>
+</template>
