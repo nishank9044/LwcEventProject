@@ -19,18 +19,14 @@
                   onclick={handleAddSpeaker}></lightning-button>
             </div>
          <template if:true={speakerList}>
-            
-            <lightning-datatable
-            key-field="id"
-            data={speakerList}
-            show-row-number-column
-            hide-checkbox-column
-            columns={columnList}>
-          </lightning-datatable>
+            <template for:each={speakerList} for:item="speaker">
+                <c-speaker-tile speaker = {speaker} key = {speaker.Id}></c-speaker-tile>
+            </template>
          </template>
           <template if:true={error}>
           <strong> Err  No records to display !!!</strong>
           </template>
+         
         </lightning-tab>
         <lightning-tab label="Event Location Details" value="location" onactive={handleActiveLocation} >
         <template if:true={eventLocation}>

@@ -41,7 +41,7 @@ handleActiveSpeaker(){
             speaker.Name = speaker.Speaker__r.Name;
             speaker.Email = speaker.Speaker__r.Email__c;
             speaker.Phone = speaker.Speaker__r.Phone__c;
-            
+            speaker.Picture__c = speaker.Speaker__r.Picture__c
           });
         this.speakerList = result
         this.error = undefined

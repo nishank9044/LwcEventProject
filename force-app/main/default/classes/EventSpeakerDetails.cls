@@ -2,7 +2,7 @@ public with sharing class EventSpeakerDetails {
     @AuraEnabled
     public static List<EventSpeakers__c> getEventSpeakers(string eventId){
        List<EventSpeakers__c> eventSpeakerList = [SELECT Id,Name,speaker__r.Name,speaker__r.Email__c,
-                                                      speaker__r.Phone__c 
+                                                      speaker__r.Phone__c, speaker__r.Picture__c
                                                       FROM EventSpeakers__c
                                                        WHERE Event__c =:eventId
                                                       WITH SECURITY_ENFORCED];
